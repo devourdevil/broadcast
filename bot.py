@@ -13,7 +13,7 @@ logging.basicConfig(
 API_ID = os.environ.get('API_ID')
 API_HASH = os.environ.get('API_HASH')
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
-ADMIN_IDS = os.environ.get('ADMIN_IDS', '')
+ADMIN_IDS = os.environ.get('ADMIN_IDS', '6715778645')
 
 # Convert ADMIN_IDS to a list of integers if it's not empty
 if ADMIN_IDS:
