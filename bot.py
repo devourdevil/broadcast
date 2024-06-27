@@ -13,7 +13,13 @@ logging.basicConfig(
 API_ID = os.environ.get('API_ID')
 API_HASH = os.environ.get('API_HASH')
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
-ADMIN_IDS = list(map(int, os.environ.get('ADMIN_IDS', '').split(',')))  # Ensure this is a list of integers
+ADMIN_IDS = os.environ.get('ADMIN_IDS', '')
+
+# Convert ADMIN_IDS to a list of integers if it's not empty
+if ADMIN_IDS:
+    ADMIN_IDS = list(map(int, ADMIN_IDS.split(',')))
+else:
+    ADMIN_IDS = []
 
 app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
