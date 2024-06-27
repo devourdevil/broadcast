@@ -137,7 +137,7 @@ async def bcast(client: Client, message: Message):
 async def forward_to_admin(client: Client, message: Message):
     user = message.from_user
     user_name = user.username or f"{user.first_name} {user.last_name or ''}".strip()
-    caption = f"Message from {user_name} ({user.id}):\n"
+    caption = f"Message from @{user_name} ({user.id}):\n"
 
     for admin_id in ADMIN_IDS:
         try:
